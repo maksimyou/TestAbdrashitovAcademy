@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 import './App.scss'
 import { Button } from '@mui/material'
 import rickAndMorty from './assets/rick-and-morty-siemki.jpg'

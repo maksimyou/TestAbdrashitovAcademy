@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import {useState} from 'react'
 import './Products.scss'
 import Header from '../../components/header/Header'
 import Main from '../../components/main/Main'

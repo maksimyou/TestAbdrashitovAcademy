@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react'
+import { FC, useEffect } from 'react'
 import './Main.scss'
 import {useAppDispatch,useAppSelector} from '../../hooks/useTypeSelectDispstch'
 import {getCharacter} from '../../redux/character/actions'
@@ -25,9 +25,9 @@ const Main:FC<MainProps> = ({switchh}) => {
         {switchh&&favourites.length === 0
         ? <div className='main-not-favorite'>У вас нет избранных</div>
         :switchh&&favourites.length !== 0
-        ?characters.results.filter(e=> favourites.includes(e.id)).map((e,i)=>{
+        ?characters.results.filter(e=> favourites.includes(e.id)).map((e)=>{
           return <Card key={e.id} idCard={e.id} image={e.image} name={e.name}/>})
-        :characters.results.map((e,i)=>{
+        :characters.results.map((e)=>{
             return <Card key={e.id} idCard={e.id} image={e.image} name={e.name}/>})
         }
       </div>

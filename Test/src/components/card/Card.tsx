@@ -1,4 +1,4 @@
-import React,{FC} from 'react'
+import {FC} from 'react'
 import './Card.scss'
 import { MdFavorite } from "react-icons/md";
 import { MdDeleteForever } from "react-icons/md";

@@ -2,7 +2,7 @@ import { Button, FormControl, InputLabel, MenuItem, Select, TextField } from '@m
 import './CreateProduct.scss'
 import {useState} from 'react'
 import { Link } from 'react-router-dom';
-import {useAppDispatch,useAppSelector} from '../../hooks/useTypeSelectDispstch'
+import {useAppDispatch} from '../../hooks/useTypeSelectDispstch'
     import {addCharacter} from '../../redux/character/actions'
 
 const CreateProduct = () => {
@@ -164,11 +164,3 @@ const randomInteger =()=> {
 }
 
 export default CreateProduct
-
-
-
-//<div classNameName=""><span>Имя:</span>{detailsCharacter.name}</div>
-//<div classNameName=""><span>Пол:</span>{detailsCharacter.gender}</div>
-//<div classNameName=""><span>Разновидность:</span>{detailsCharacter.species}</div>
-//<div classNameName=""><span>Статус:</span>{detailsCharacter.status}</div>
-//<div classNameName=""><span>Эпизоды:</span>{detailsCharacter.episode.map(e=>e.split('/').pop()).toString()}</div>

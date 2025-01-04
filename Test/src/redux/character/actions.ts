@@ -1,7 +1,6 @@
 import { createSlice,createAsyncThunk } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
 import { CharacterState,Character,Results } from './types'
-import axios, { AxiosRequestConfig } from 'axios'
+import axios from 'axios'
 
 const initialState: CharacterState = {
     loading: false,
@@ -11,7 +10,7 @@ const initialState: CharacterState = {
             count: 0,
             pages: 0,
             next: '',
-            prev: null||''
+            prev: ''
         },
         results: [],
     },
@@ -45,29 +44,11 @@ export const getCharacter = createAsyncThunk<Character,undefined,{rejectValue:st
             return data 
         } catch (error) {
             console.log(error)
-            return  rejectWithValue(error.message ) 
+            return  rejectWithValue('') 
         }
     },
 )
 
-
-
-
-
-//export const getFavouritesCharacter = createAsyncThunk<Character,number[],{rejectValue:string}>(
-//    'character/getFavouritesCharacter',
-//    async (number,{rejectWithValue}) => {
-//        try {
-//            const number2 = number.filter(e=>e<890)
-//            const response = await axios.get(`https://rickandmortyapi.com/api/character/${number2.toString()}`);
-//            const data:Character = response.data;
-//            return data 
-//        } catch (error) {
-//            console.log(error)
-//            return  rejectWithValue(error.message ) 
-//        }
-//    },
-//)
 
 export const getDetailCharacter = createAsyncThunk<Results,number,{rejectValue:string}>(
     'character/getDetailCharacter',
@@ -78,7 +59,7 @@ export const getDetailCharacter = createAsyncThunk<Results,number,{rejectValue:s
             return data 
         } catch (error) {
             console.log(error)
-            return  rejectWithValue(error.message ) 
+            return  rejectWithValue('' ) 
         }
     },
 )
@@ -117,19 +98,6 @@ export const characterSlice = createSlice({
         .addCase(getCharacter.fulfilled ,(state,action)=>{
             state.character = action.payload as Character
         })
-        //.addCase(getFavouritesCharacter.rejected, (state, action) => {
-        //    state.error = action.payload as string
-        //})
-        //.addCase(getFavouritesCharacter.pending,(state)=>{
-        //    state.loading = false
-        //})
-        //.addCase(getFavouritesCharacter.fulfilled ,(state,action)=>{
-        //    if(!action.payload[0]){
-        //        state.character.results = [action.payload]
-        //    }else{
-        //        state.character.results = action.payload 
-        //    }
-        //})
         .addCase(getDetailCharacter.rejected, (state, action) => {
             state.error = action.payload as string
         })
