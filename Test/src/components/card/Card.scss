@@ -1,0 +1,28 @@
+.card-container {
+    max-width: 300px;
+    max-height: 380px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px black;
+    cursor: pointer;
+    padding: 20px;
+    border: solid 1px black;
+    &:hover {
+        box-shadow: 1px 1px 20px black;
+    }
+}
+.card-contnet {
+    img {
+        width: 258px;
+        height: 258px;
+    }
+    .card-name {
+        font-size: 20px;
+    }
+}
+.card-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 20px auto;
+}

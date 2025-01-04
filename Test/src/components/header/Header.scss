@@ -1,0 +1,29 @@
+.header-wrap {
+    width: 1066px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: solid 2px black;
+    margin-bottom: 50px;
+}
+
+.header-filter {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    .qwer {
+        text-wrap: nowrap;
+    }
+}
+.header-search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.header-create-product {
+}

@@ -1,0 +1,27 @@
+.create-product-container {
+    h1 {
+        margin-bottom: 50px;
+    }
+    .create-product-content {
+        border-bottom: solid 1px black;
+        padding-bottom: 30px;
+        form {
+            display: flex;
+            width: 300px;
+            //gap: 30px;
+            flex-direction: column;
+            .create-product-input {
+                margin-bottom: 30px;
+                text-align: left;
+            }
+            .create-product-input2 {
+                margin-bottom: 10px;
+            }
+            .create-product-text {
+                font-weight: 500;
+                text-align: left;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
